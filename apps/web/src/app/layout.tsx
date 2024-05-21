@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 import { primaryFont, secondaryFont } from "../settings/fonts";
+import { Footer } from "../components/common/footer/footer";
 
 export const metadata: Metadata = {
     title: "Create Turborepo",
@@ -11,8 +12,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }): JSX.Element {
     return (
         <html lang="en">
-            <body className={`${primaryFont.variable} ${secondaryFont.variable} font-sans`}>
+            <body
+                className={`${primaryFont.variable} ${secondaryFont.variable} font-sans text-primary-950 bg-primary-50`}
+            >
                 {children}
+                <Footer />
             </body>
         </html>
     );
