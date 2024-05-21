@@ -11,4 +11,13 @@ module.exports = {
         // Or if using `src` directory:
         "./src/**/*.{js,ts,jsx,tsx,mdx}",
     ],
+
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: ["var(--secondary-font)", "sans-serif"],
+                serif: ["var(--primary-font)", "serif"],
+            },
+        },
+    },
 };
