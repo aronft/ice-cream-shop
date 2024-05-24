@@ -8,7 +8,7 @@ interface ContainerProps extends HTMLAttributes<{}> {
 export const Container = ({ tag = "div", children, className, ...props }: ContainerProps) => {
     const Tag = tag;
     return (
-        <Tag className={cn("container px-8 mx-auto", className)} {...props}>
+        <Tag className={cn("container px-8 md:px-0 mx-auto", className)} {...props}>
             {children}
         </Tag>
     );
