@@ -54,6 +54,7 @@ module.exports = {
                 950: "#2c1e1c",
             },
             transparent: "transparent",
+            white: "#fff",
         },
         extend: {
             fontFamily: {
