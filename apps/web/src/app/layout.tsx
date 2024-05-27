@@ -14,10 +14,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
     return (
         <html lang="en">
             <body
-                className={`${primaryFont.variable} ${secondaryFont.variable} font-sans text-primary-950 bg-primary-50`}
+                className={`${primaryFont.variable} ${secondaryFont.variable} font-sans text-primary-950  bg-primary-50 flex flex-col justify-between`}
             >
                 <Header />
-                {children}
+                <main className="flex-1">{children}</main>
                 <Footer />
             </body>
         </html>
