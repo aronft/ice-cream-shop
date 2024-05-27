@@ -7,8 +7,8 @@ import { Menu } from "./menu";
 export const Header = async () => {
     const { menu } = await getData();
     return (
-        <header className="">
-            <Container className="flex justify-between items-center border-b  border-tertiary-400">
+        <header className="relative z-10">
+            <Container className="fixed left-0 right-0 flex justify-between items-center border-b  border-tertiary-400">
                 <Logo />
                 <Menu menu={menu} />
                 <div className="flex gap-4">

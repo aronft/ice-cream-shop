@@ -1,3 +1,9 @@
+import { HeroSection } from "@/components/sections/hero-section/hero-section";
+
 export default function Page(): JSX.Element {
-    return <h1>Test</h1>;
+    return (
+        <div>
+            <HeroSection />
+        </div>
+    );
 }
