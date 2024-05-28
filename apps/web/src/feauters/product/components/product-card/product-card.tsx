@@ -19,7 +19,7 @@ export const ProductCard = ({ src, name, price, rating, titleTag }: ProductCardP
                             alt={name}
                             width={270}
                             height={190}
-                            className="w-full h-48 object-contain scale-125 right-0   rotate-[25deg] object-top"
+                            className="w-full h-60 object-contain scale-125 right-0   rotate-[25deg] object-top"
                         />
                     </div>
                 </header>
