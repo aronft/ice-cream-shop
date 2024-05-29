@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 
 const sharedConfig = require("@repo/tailwind-config/tailwind.config.js");
+const colors = require("tailwindcss/colors");
+
 module.exports = {
     ...sharedConfig,
     content: [
@@ -55,6 +57,7 @@ module.exports = {
             },
             transparent: "transparent",
             white: "#fff",
+            amber: colors.amber,
         },
         extend: {
             fontFamily: {

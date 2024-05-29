@@ -2,16 +2,26 @@ import Image from "next/image";
 import { ProductModel } from "../../models/product.model";
 import { AiOutlineShopping } from "react-icons/ai";
 import Link from "next/link";
+import { Rating } from "@/components/ui/atoms/rating/rating";
+import { cn } from "@/lib/utils/class-name";
 
 interface ProductCardProps extends ProductModel {
     titleTag: keyof Pick<JSX.IntrinsicElements, "h2" | "h3" | "h4">;
+    className?: string;
 }
 
-export const ProductCard = ({ src, name, price, rating, titleTag }: ProductCardProps) => {
+export const ProductCard = ({
+    src,
+    name,
+    price,
+    className,
+    rating,
+    titleTag,
+}: ProductCardProps) => {
     const TitleTag = titleTag;
     return (
-        <Link href={`/product/${name}`}>
-            <article className="flex flex-col gap-4 p-2  rounded-xl">
+        <Link href={`/product/${name}`} className={cn("inline-block", className)}>
+            <article className="flex flex-col gap-4 p-2  rounded-xl h-full">
                 <header className="pt-10 overflow-hidden ">
                     <div className="bg-primary-100  rounded-3xl">
                         <Image
@@ -23,14 +33,16 @@ export const ProductCard = ({ src, name, price, rating, titleTag }: ProductCardP
                         />
                     </div>
                 </header>
-                <footer className="flex justify-between items-start">
-                    <div className="flex flex-wrap">
+                <footer className="flex justify-between items-start flex-grow gap-2">
+                    <div className="flex flex-wrap justify-between h-full">
                         <TitleTag className="w-full font-bold text-tertiary-950">{name}</TitleTag>
-                        <span className="text-tertiary-950 font-medium">${price}</span>
-                        <span>{rating}</span>
+                        <div className="flex items-center gap-4 mt-auto">
+                            <span className="text-tertiary-950 font-medium">${price}</span>
+                            <Rating rating={3} />
+                        </div>
                     </div>
-                    <button className="border group border-tertiary-100 rounded-full p-2 hover:bg-tertiary-900">
-                        <AiOutlineShopping className="text-2xl group-hover:text-white" />
+                    <button className="border group border-tertiary-100 rounded-full p-2  hover:bg-tertiary-900 min-h-max min-w-max">
+                        <AiOutlineShopping className="text-xl w-max group-hover:text-white" />
                     </button>
                 </footer>
             </article>

@@ -7,6 +7,7 @@ import { ProductCard } from "../product-card/product-card";
 import image1 from "@/assets/ice-cream-1.png";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { useRef } from "react";
+import "./popular-product.css";
 
 export const PopularProducts = () => {
     const settings: Settings = {
@@ -76,6 +77,7 @@ export const PopularProducts = () => {
                 </div>
                 <Slider {...settings} className="" ref={ref}>
                     <ProductCard
+                        className="h-full"
                         titleTag={"h2"}
                         id={""}
                         src={image1.src}
@@ -84,6 +86,7 @@ export const PopularProducts = () => {
                         rating={2}
                     />
                     <ProductCard
+                        className="h-full"
                         titleTag={"h2"}
                         id={""}
                         src={image1.src}
@@ -92,6 +95,7 @@ export const PopularProducts = () => {
                         rating={2}
                     />
                     <ProductCard
+                        className="h-full"
                         titleTag={"h2"}
                         id={""}
                         src={image1.src}
