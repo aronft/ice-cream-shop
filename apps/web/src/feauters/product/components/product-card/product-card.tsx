@@ -38,7 +38,7 @@ export const ProductCard = ({
                         <TitleTag className="w-full font-bold text-tertiary-950">{name}</TitleTag>
                         <div className="flex items-center gap-4 mt-auto">
                             <span className="text-tertiary-950 font-medium">${price}</span>
-                            <Rating rating={3} />
+                            <Rating rating={rating} />
                         </div>
                     </div>
                     <button className="border group border-tertiary-100 rounded-full p-2  hover:bg-tertiary-900 min-h-max min-w-max">

@@ -81,9 +81,9 @@ export const PopularProducts = () => {
                         titleTag={"h2"}
                         id={""}
                         src={image1.src}
-                        name={"Helado muy rico"}
+                        name={"Helado muy rico chon mas"}
                         price={22}
-                        rating={2}
+                        rating={3}
                     />
                     <ProductCard
                         className="h-full"
@@ -100,7 +100,7 @@ export const PopularProducts = () => {
                         id={""}
                         src={image1.src}
                         name={"Helado muy rico"}
-                        price={22}
+                        price={23}
                         rating={2}
                     />
                 </Slider>
