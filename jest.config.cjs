@@ -71,7 +71,7 @@ const config: Config = {
     // ],
 
     // An array of file extensions your modules use
-    moduleFileExtensions: ["tsx", "ts"],
+    moduleFileExtensions: ["tsx", "ts", "js"],
 
     // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
     // moduleNameMapper: {},
@@ -90,12 +90,15 @@ const config: Config = {
 
     // Run tests from one or more projects
     projects: [
-        {
-            displayName: "Web app",
-            testEnvironment: "jsdom",
-            testMatch: ["<rootDir>/apps/web/src/**/?(*.)+(spec|test).ts?(x)"],
-            testPathIgnorePatterns: ["<rootDir>/apps/web/dist"],
-        },
+        // {
+        //     displayName: "Web app",
+        //     testEnvironment: "jsdom",
+        //     testMatch: ["<rootDir>/apps/web/src/**/?(*.)+(spec|test).ts?(x)"],
+        //     testPathIgnorePatterns: ["<rootDir>/apps/web/dist"],
+        //     moduleNameMapper: {
+        //         "^@/(.*)$": "<rootDir>/apps/web/src/$1",
+        //     },
+        // },
     ],
 
     // Use this configuration option to add custom reporters to Jest
@@ -166,8 +169,12 @@ const config: Config = {
     // testRunner: "jest-circus/runner",
 
     // A map from regular expressions to paths to transformers
-    // transform: undefined,
+    transform: {
+        "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",
 
+        // "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",
+        "^.+\\.(t|j)sx?$": "ts-jest",
+    },
     // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
     // transformIgnorePatterns: [
     //   "/node_modules/",
@@ -188,3 +195,4 @@ const config: Config = {
 };
 
 export default config;
+// export default createJestConfig(config);

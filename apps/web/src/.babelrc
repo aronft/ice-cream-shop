@@ -1,0 +1,8 @@
+{
+    "presets": [
+        "next/babel", // Usa el preset de Next.js
+        "@babel/preset-env",
+        "@babel/preset-react",
+        "@babel/preset-typescript"
+    ]
+}

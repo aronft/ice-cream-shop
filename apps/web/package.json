@@ -24,6 +24,9 @@
         "tailwind-merge": "^2.3.0"
     },
     "devDependencies": {
+        "@babel/preset-env": "^7.24.6",
+        "@babel/preset-react": "^7.24.6",
+        "@babel/preset-typescript": "^7.24.6",
         "@next/eslint-plugin-next": "^14.1.1",
         "@repo/eslint-config": "workspace:*",
         "@repo/tailwind-config": "workspace:*",
