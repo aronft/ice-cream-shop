@@ -20,5 +20,6 @@
         "jest.config.js",
         "jest.config.cjs"
     ],
-    "exclude": ["node_modules"]
+    "exclude": ["node_modules"],
+    "types": ["@testing-library/jest-dom"]
 }

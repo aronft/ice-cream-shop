@@ -20,7 +20,11 @@ export const ProductCard = ({
 }: ProductCardProps) => {
     const TitleTag = titleTag;
     return (
-        <Link href={`/product/${name}`} className={cn("inline-block", className)}>
+        <Link
+            href={`/product/${name}`}
+            className={cn("inline-block", className)}
+            aria-label={`Product ${name}`}
+        >
             <article className="flex flex-col gap-4 p-2  rounded-xl h-full">
                 <header className="pt-10 overflow-hidden ">
                     <div className="bg-primary-100  rounded-3xl">

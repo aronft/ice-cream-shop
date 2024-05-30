@@ -1,12 +1,14 @@
+"use client";
 import { SVGProps } from "@/lib/models/svg.model";
 import { cn } from "@/lib/utils/class-name";
+import { useId } from "react";
 
 interface StarProps extends SVGProps {
     percentage?: string;
 }
 
 export const RatingIcon = ({ percentage = "100%", className, ...props }: StarProps) => {
-    const id = crypto.randomUUID();
+    const id = useId();
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
