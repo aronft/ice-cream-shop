@@ -5,7 +5,7 @@ import { BgStrawbarry } from "@/components/illustrations/bg-strawbarry";
 
 export const HeroSection = () => {
     return (
-        <section className="pb-16 pt-20 relative overflow-hidden">
+        <section className="pb-16  relative overflow-hidden">
             <Container className="flex gap-8 flex-col md:flex-row-reverse justify-center relative items-centerpt-16 lg:justify-between pt-16 items-center">
                 <div className="relative">
                     <BgStrawbarry className="absolute bottom-0 left-0 scale-[2.5]" />

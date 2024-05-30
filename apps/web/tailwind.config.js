@@ -58,11 +58,15 @@ module.exports = {
             transparent: "transparent",
             white: "#fff",
             amber: colors.amber,
+            slate: colors.slate,
         },
         extend: {
             fontFamily: {
                 sans: ["var(--secondary-font)", "sans-serif"],
                 serif: ["var(--primary-font)", "serif"],
+            },
+            backgroundImage: {
+                "gradient-radial": "radial-gradient(circle, var(--tw-gradient-stops))",
             },
         },
     },

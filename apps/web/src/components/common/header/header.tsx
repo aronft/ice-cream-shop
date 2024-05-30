@@ -8,8 +8,8 @@ import { MobileMenu } from "./mobile-menu";
 export const Header = async () => {
     const { menu } = await getData();
     return (
-        <header className="relative z-10">
-            <Container className="lg:flex hidden fixed left-0 right-0 justify-between items-center border-b  border-tertiary-400">
+        <header className=" z-10  bg-white h-auto fixed left-0 right-0">
+            <Container className="lg:flex hidden   justify-between items-center   ">
                 <Logo />
                 <Menu menu={menu} />
                 <div className="flex gap-4">
