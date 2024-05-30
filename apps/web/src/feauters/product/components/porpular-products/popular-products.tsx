@@ -8,8 +8,13 @@ import image1 from "@/assets/ice-cream-1.png";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { useRef } from "react";
 import "./popular-product.css";
+import { ProductModel } from "../../models/product.model";
 
-export const PopularProducts = () => {
+interface PopularProductsProps {
+    products: ProductModel[];
+}
+
+export const PopularProducts = ({ products }: PopularProductsProps) => {
     const settings: Settings = {
         dots: false,
         infinite: false,
@@ -76,33 +81,18 @@ export const PopularProducts = () => {
                     </div>
                 </div>
                 <Slider {...settings} className="" ref={ref}>
-                    <ProductCard
-                        className="h-full"
-                        titleTag={"h2"}
-                        id={""}
-                        src={image1.src}
-                        name={"Helado muy rico chon mas"}
-                        price={22}
-                        rating={3}
-                    />
-                    <ProductCard
-                        className="h-full"
-                        titleTag={"h2"}
-                        id={""}
-                        src={image1.src}
-                        name={"Helado muy rico"}
-                        price={22}
-                        rating={2}
-                    />
-                    <ProductCard
-                        className="h-full"
-                        titleTag={"h2"}
-                        id={""}
-                        src={image1.src}
-                        name={"Helado muy rico"}
-                        price={23}
-                        rating={2}
-                    />
+                    {products.map((product) => (
+                        <ProductCard
+                            key={product.id}
+                            className="h-full"
+                            titleTag={"h2"}
+                            id={product.id}
+                            src={product.src}
+                            name={product.name}
+                            price={product.price}
+                            rating={product.rating}
+                        />
+                    ))}
                 </Slider>
             </Container>
         </section>
