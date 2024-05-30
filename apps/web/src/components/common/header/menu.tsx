@@ -11,7 +11,6 @@ interface MenuProps extends React.ComponentPropsWithoutRef<"ul"> {
 
 export const Menu = ({ className, menu, ...props }: MenuProps) => {
     const pathname = usePathname();
-    console.log(pathname);
     return (
         <ul className={cn("flex items-center gap-8", className)} {...props}>
             {menu.map((itemMenu) => (
