@@ -23,7 +23,7 @@ const DATA: Data = {
         {
             id: "3",
             name: "About us",
-            url: "/about-aus",
+            url: "/about-us",
         },
     ],
 };
