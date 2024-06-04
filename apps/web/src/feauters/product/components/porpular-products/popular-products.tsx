@@ -4,7 +4,6 @@ import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ProductCard } from "../product-card/product-card";
-import image1 from "@/assets/ice-cream-1.png";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { useRef } from "react";
 import "./popular-product.css";
