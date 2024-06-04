@@ -4,6 +4,8 @@ import { AiOutlineShopping } from "react-icons/ai";
 import Link from "next/link";
 import { Rating } from "@/components/ui/atoms/rating/rating";
 import { cn } from "@/lib/utils/class-name";
+import { ProductImage } from "../product-image/product-image";
+import { ProductTitle } from "../product-title/product-title";
 
 interface ProductCardProps extends ProductModel {
     titleTag: keyof Pick<JSX.IntrinsicElements, "h2" | "h3" | "h4">;
@@ -18,7 +20,6 @@ export const ProductCard = ({
     rating,
     titleTag,
 }: ProductCardProps) => {
-    const TitleTag = titleTag;
     return (
         <Link
             href={`/product/${name}`}
@@ -28,18 +29,12 @@ export const ProductCard = ({
             <article className="flex flex-col gap-4 p-2  rounded-xl h-full">
                 <header className="pt-10 overflow-hidden ">
                     <div className="bg-primary-100  rounded-3xl">
-                        <Image
-                            src={src}
-                            alt={name}
-                            width={270}
-                            height={190}
-                            className="w-full h-60 object-contain scale-125 right-0   rotate-[25deg] object-top"
-                        />
+                        <ProductImage width={270} height={190} src={src} alt={name} />
                     </div>
                 </header>
                 <footer className="flex justify-between items-start flex-grow gap-2">
                     <div className="flex flex-wrap justify-between h-full">
-                        <TitleTag className="w-full font-bold text-tertiary-950">{name}</TitleTag>
+                        <ProductTitle title={name} titleTag={titleTag} />
                         <div className="flex items-center gap-4 mt-auto">
                             <span className="text-tertiary-950 font-medium">${price}</span>
                             <Rating rating={rating} />
