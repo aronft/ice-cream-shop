@@ -2,12 +2,13 @@ import { BreadcrumpSection } from "@/components/common/breadcrump-section/breadc
 import { Container } from "@/components/ui/objects/container/container";
 import imageAboutUs from "@/assets/about-us/about-us-image.jpg";
 import Image from "next/image";
+import WhatWeDoSection from "./components/what-we-do-section/what-we-do-section";
 
 export default async function AboutPage() {
     return (
         <>
             <BreadcrumpSection title="Who We Are" />
-            <section className="py-16">
+            <section className="py-16 ">
                 <Container className="flex flex-col md:flex-row gap-16  justify-between ">
                     <div className="flex-grow-1/2 max-w-2xl gap-8 flex flex-col justify-end md:pb-16">
                         <h2 className="text-4xl font-bold 2xl:text-6xl">Our History</h2>
@@ -28,6 +29,7 @@ export default async function AboutPage() {
                     </div>
                 </Container>
             </section>
+            <WhatWeDoSection />
         </>
     );
 }
