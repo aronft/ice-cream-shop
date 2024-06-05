@@ -6,7 +6,7 @@ interface LogoProps {
 
 export const Logo = ({ className }: LogoProps) => {
     return (
-        <span className={cn("text-tertiary-950 font-bold text-3xl font-serif", className)}>
+        <span className={cn("text-tertiary-950 font-bold text-xl font-serif", className)}>
             Frosty Scoops
         </span>
     );

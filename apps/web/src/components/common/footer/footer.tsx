@@ -1,5 +1,6 @@
 import { Container } from "../../ui/objects/container/container";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { Logo } from "../logo/logo";
 
 export const Footer = () => {
     const year = new Date().getFullYear();
@@ -8,16 +9,14 @@ export const Footer = () => {
             <Container className="flex flex-col">
                 <div className="flex flex-col md:flex-row gap-8 md:justify-between md:gap-8 items-center md:items-start text-center md:text-start">
                     <div className="flex flex-col gap-4">
-                        <p className="text-tertiary-950 font-bold text-3xl font-serif">
-                            Frosti Scoops
-                        </p>
+                        <Logo />
                         <p className="max-w-sm">
                             Produces only quality ingredients, tries to support socially important
                             topics and use less plastic in packaging
                         </p>
                     </div>
                     <div className="flex flex-col gap-4">
-                        <p className="text-tertiary-950 font-bold text-2xl">Useful Links</p>
+                        <p className="text-tertiary-950 font-bold text-lg">Useful Links</p>
                         <ul className="flex flex-col gap-2 ">
                             <li>
                                 <a href="#" className="hover:underline">
@@ -37,7 +36,7 @@ export const Footer = () => {
                         </ul>
                     </div>
                     <div className="flex flex-col gap-4">
-                        <p className="text-tertiary-950 font-bold text-2xl">Get in Touch</p>
+                        <p className="text-tertiary-950 font-bold text-lg">Get in Touch</p>
                         <p>Follow in our social media</p>
                         <ul className="flex flex-wrap gap-2  items-center justify-center md:justify-start">
                             <li>

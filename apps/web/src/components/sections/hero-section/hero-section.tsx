@@ -18,7 +18,7 @@ export const HeroSection = () => {
                 </div>
                 <div className="relative  max-w-max">
                     <div className="relative flex flex-col gap-8  flex-1  justify-center items-center text-center lg:text-start lg:items-start">
-                        <h1 className="text-5xl font-bold">
+                        <h1 className="text-6xl font-bold">
                             Welcome To{" "}
                             <span className="text-secondary-600 block text-7xl">
                                 Frosty Scoops!

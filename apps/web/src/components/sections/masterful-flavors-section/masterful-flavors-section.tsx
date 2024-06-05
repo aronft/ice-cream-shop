@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/objects/container/container";
 import Image from "next/image";
 import masterFulImage from "@/assets/dropping-ice-cream.png";
+import { Heading } from "@/components/ui/atoms/heading/heading";
 
 const MasterfulFlavorsSection = () => {
     return (
@@ -21,8 +22,10 @@ const MasterfulFlavorsSection = () => {
                     className="aspect-[4:3] w-[50vw] max-w-2xl object-cover invisible"
                 />
                 <div className="text-center flex flex-col gap-4 md:text-start   max-w-xl ">
-                    <h2 className="text-4xl font-bold">Masterful Flavors</h2>
-                    <p className="md:text-lg">
+                    <Heading size="large" className="font-bold">
+                        Masterful Flavors
+                    </Heading>
+                    <p className="">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id
                         penatibus imperdiet. Turpis egestas ultricies purus auctor tincidunt lacus
                         nunc.

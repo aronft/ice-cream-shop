@@ -12,6 +12,7 @@ import carouselImage3 from "@/assets/about-us/carousel-3.jpg";
 import carouselImage4 from "@/assets/about-us/carousel-4.jpg";
 import carouselImage5 from "@/assets/about-us/carousel-5.jpg";
 import carouselImage6 from "@/assets/about-us/carousel-6.jpg";
+import { Heading } from "@/components/ui/atoms/heading/heading";
 
 const WhatWeDoSection = () => {
     const ref = useRef<Slider | null>(null);
@@ -38,7 +39,9 @@ const WhatWeDoSection = () => {
         <section className="py-16 bg-white">
             <Container className="flex flex-col items-center gap-8">
                 <div className="flex flex-col gap-8 max-w-2xl text-center">
-                    <h3 className="text-3xl font-bold 2xl:text-6xl">What We Do</h3>
+                    <Heading className="font-bold" size="large">
+                        What We Do
+                    </Heading>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi,
                         suscipit? Accusantium, voluptatum quae
