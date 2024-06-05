@@ -68,6 +68,48 @@ module.exports = {
             backgroundImage: {
                 "gradient-radial": "radial-gradient(circle, var(--tw-gradient-stops))",
             },
+            fontSize: {
+                xs: "var(--fs-xs)",
+                sm: "var(--fs-sm)",
+                base: "var(--fs-base)",
+                md: "var(--fs-md)",
+                lg: "var(--fs-lg)",
+                xl: "var(--fs-xl)",
+                xl: "var(--fs-xl)",
+                "2xl": [
+                    "var(--fs-2xl)",
+                    {
+                        lineHeight: "1.3em",
+                    },
+                ],
+                "3xl": [
+                    "var(--fs-3xl)",
+                    {
+                        lineHeight: "1.3em",
+                    },
+                ],
+                "4xl": [
+                    "var(--fs-4xl)",
+                    {
+                        lineHeight: "1.3em",
+                    },
+                ],
+                "5xl": [
+                    "var(--fs-5xl)",
+                    {
+                        lineHeight: "1.3em",
+                    },
+                ],
+                "6xl": [
+                    "var(--fs-6xl)",
+                    {
+                        lineHeight: "1.3em",
+                    },
+                ],
+                "7xl": "var(--fs-7xl)",
+                "8xl": "var(--fs-8xl)",
+                "9xl": "var(--fs-9xl)",
+            },
         },
     },
 };
