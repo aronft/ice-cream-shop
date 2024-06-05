@@ -8,6 +8,7 @@ import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { useRef } from "react";
 import "./popular-product.css";
 import { ProductModel } from "../../models/product.model";
+import { Heading } from "@/components/ui/atoms/heading/heading";
 
 interface PopularProductsProps {
     products: ProductModel[];
@@ -63,7 +64,9 @@ export const PopularProducts = ({ products }: PopularProductsProps) => {
         <section className="py-16">
             <Container className="flex flex-col gap-4">
                 <div className="flex justify-between items-center">
-                    <h2 className="text-4xl font-bold">Popular Products</h2>
+                    <Heading size="large" className="font-bold">
+                        Popular Products
+                    </Heading>
                     <div className="flex gap-2">
                         <button
                             className="border group border-tertiary-100 rounded-full p-2 hover:bg-tertiary-900"

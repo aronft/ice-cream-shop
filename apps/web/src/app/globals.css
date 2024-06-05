@@ -6,34 +6,77 @@
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
-*, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 * {
-  margin: 0;
+    margin: 0;
 }
 body {
-  line-height: 1.6;
-  min-height: 100dvh;
-  -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+    min-height: 100dvh;
+    -webkit-font-smoothing: antialiased;
 }
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
 }
-input, button, textarea, select {
-  font: inherit;
+input,
+button,
+textarea,
+select {
+    font: inherit;
 }
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
 }
-h1, h2, h3, h4 {
-  text-wrap: balance
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
 }
 
 p {
-	tex-wrap: pretty;
+    tex-wrap: pretty;
 }
-#root, #__next {
-  isolation: isolate;
-}  
+#root,
+#__next {
+    isolation: isolate;
+}
+
+:root {
+    /* font sizes */
+   --fs-xs: clamp(0.79rem, -0.02vi + 0.79rem, 0.78rem);
+--fs-sm: clamp(0.89rem, 0.09vi + 0.87rem, 0.94rem);
+--fs-base: clamp(1rem, 0.23vi + 0.94rem, 1.13rem);
+--fs-md: clamp(1.13rem, 0.41vi + 1.02rem, 1.35rem);
+--fs-lg: clamp(1.27rem, 0.64vi + 1.1rem, 1.62rem);
+--fs-xl: clamp(1.42rem, 0.95vi + 1.19rem, 1.94rem);
+--fs-2xl: clamp(1.6rem, 1.33vi + 1.27rem, 2.33rem);
+--fs-3xl: clamp(1.8rem, 1.81vi + 1.35rem, 2.8rem);
+--fs-4xl: clamp(2.03rem, 2.42vi + 1.42rem, 3.36rem);
+--fs-5xl: clamp(2.28rem, 3.18vi + 1.49rem, 4.03rem);
+--fs-6xl: clamp(2.57rem, 4.13vi + 1.53rem, 4.84rem);
+--fs-7xl: clamp(2.89rem, 5.31vi + 1.56rem, 5.8rem);
+--fs-8xl: clamp(3.25rem, 6.76vi + 1.56rem, 6.97rem);
+--fs-9xl: clamp(3.65rem, 8.56vi + 1.51rem, 8.36rem);
+}
+
+/* default styles */
+
+body {
+    @apply text-base;
+}
