@@ -2,6 +2,8 @@ import { Container } from "@/components/ui/objects/container/container";
 import Image from "next/image";
 import iceCreamRight from "@/assets/ice-cream-cone.png";
 import { BgStrawbarry } from "@/components/illustrations/bg-strawbarry";
+import { Link } from "@/components/ui/atoms/link/link";
+import { Button } from "@/components/ui/atoms/button/button";
 
 export const HeroSection = () => {
     return (
@@ -28,9 +30,9 @@ export const HeroSection = () => {
                             Welcome to Frosty Scoops! Enjoy our delicious, hand-crafted ice cream in
                             a variety of flavors. Treat yourself today!
                         </p>
-                        <button className="bg-secondary-600 text-primary-50 py-2 px-4 rounded-md">
+                        <Link href="#" className="" view="button">
                             Buy Now
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </Container>
