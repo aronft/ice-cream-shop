@@ -9,12 +9,14 @@ import { useRef } from "react";
 import "./popular-product.css";
 import { ProductModel } from "../../models/product.model";
 import { Heading } from "@/components/ui/atoms/heading/heading";
+import { cn } from "@/lib/utils/class-name";
 
 interface PopularProductsProps {
     products: ProductModel[];
+    className?: string;
 }
 
-export const PopularProducts = ({ products }: PopularProductsProps) => {
+export const PopularProducts = ({ products, className }: PopularProductsProps) => {
     const settings: Settings = {
         dots: false,
         infinite: false,
@@ -61,7 +63,7 @@ export const PopularProducts = ({ products }: PopularProductsProps) => {
         ref.current?.slickPrev();
     };
     return (
-        <section className="py-16">
+        <section className={cn("py-16", className)}>
             <Container className="flex flex-col gap-4">
                 <div className="flex justify-between items-center">
                     <Heading size="large" className="font-bold">
@@ -69,13 +71,13 @@ export const PopularProducts = ({ products }: PopularProductsProps) => {
                     </Heading>
                     <div className="flex gap-2">
                         <button
-                            className="border group border-tertiary-100 rounded-full p-2 hover:bg-tertiary-900"
+                            className="border group text-tertiary-900 border-tertiary-500 rounded-full p-2 hover:bg-tertiary-900"
                             onClick={handlePrevSlide}
                         >
                             <BsArrowLeft className="text-xl group-hover:text-white" />
                         </button>
                         <button
-                            className="border group border-tertiary-100 rounded-full p-2 hover:bg-tertiary-900"
+                            className="border group text-tertiary-900 border-tertiary-500 rounded-full p-2 hover:bg-tertiary-900"
                             onClick={handleNextSlide}
                         >
                             <BsArrowRight className="text-xl group-hover:text-white" />
