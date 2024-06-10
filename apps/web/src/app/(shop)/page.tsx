@@ -9,7 +9,7 @@ export default async function Page() {
     return (
         <div>
             <HeroSection />
-            <PopularProducts products={products} />
+            <PopularProducts products={products} className="relative" />
             <SeparatorSection />
             <MasterfulFlavorsSection />
         </div>
