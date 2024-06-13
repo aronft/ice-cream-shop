@@ -59,6 +59,7 @@ module.exports = {
             white: "#fff",
             amber: colors.amber,
             slate: colors.slate,
+            gray: colors.gray,
         },
         extend: {
             fontFamily: {

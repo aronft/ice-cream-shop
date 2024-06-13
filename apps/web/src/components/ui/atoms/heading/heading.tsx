@@ -3,7 +3,7 @@ import { HTMLAttributes } from "react";
 
 interface HeadingProps extends HTMLAttributes<HTMLHeadElement> {
     tag?: keyof Pick<JSX.IntrinsicElements, "h1" | "h2" | "h3" | "h4">;
-    size?: "small" | "medium" | "large" | "big";
+    size?: "extra-small" | "small" | "medium" | "large" | "big";
 }
 
 const sizesClasses: Record<NonNullable<HeadingProps["size"]>, string> = {
@@ -11,6 +11,7 @@ const sizesClasses: Record<NonNullable<HeadingProps["size"]>, string> = {
     large: "text-5xl",
     medium: "text-4xl",
     small: "text-3xl",
+    "extra-small": "text-2xl",
 };
 
 export const Heading = ({

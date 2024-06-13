@@ -7,6 +7,7 @@ import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineShopping, AiOutlineUser } from "react-icons/ai";
 import { Logo } from "../logo/logo";
 import { cn } from "@/lib/utils/class-name";
+import { CartHover } from "@/feauters/cart/components/cart-hover/cart-hover";
 
 interface MenuMobileProps {
     menu: MenuModel[];
@@ -25,7 +26,7 @@ export const MobileMenu = ({ menu }: MenuMobileProps) => {
                 <Logo className="text-base" />
                 <div className="flex gap-2">
                     <AiOutlineUser className="text-primary-950" />
-                    <AiOutlineShopping className="text-primary-950" />
+                    <CartHover />
                 </div>
             </Container>
             <div
