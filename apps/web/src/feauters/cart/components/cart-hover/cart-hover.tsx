@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils/class-name";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineShopping } from "react-icons/ai";
 import { CartList } from "../cart-list";
+import { useCartStore } from "../../store/cart.store";
 
 interface CartHoverProps {
     className?: string;
@@ -13,6 +14,8 @@ interface CartHoverProps {
 
 export const CartHover = ({ className }: CartHoverProps): JSX.Element => {
     const [isActive, setIsActive] = useState(false);
+    const cart = useCartStore((state) => state.cart);
+    const totalCartItems = useCartStore((state) => state.getTotalItems);
     return (
         <div className="relative h-full flex items-center">
             <AiOutlineShopping className="text-primary-950" onClick={() => setIsActive(true)} />
@@ -21,12 +24,12 @@ export const CartHover = ({ className }: CartHoverProps): JSX.Element => {
                 <div className="rounded-tl-md rounded-bl-md  bg-white fixed top-0 left-0 right-0 h-dvh w-dvw md:w-1/2 md:left-auto xl:w-[30vw]">
                     <header className="p-4 border-b border-slate-500 flex justify-between items-center">
                         <Heading tag="h2" className="font-medium text-lg">
-                            My cart (3)
+                            My cart ({totalCartItems()})
                         </Heading>
                         <AiOutlineClose className="text-lg" onClick={() => setIsActive(false)} />
                     </header>
                     <div className="p-4 flex flex-col ">
-                        <CartList items={[]} />
+                        <CartList items={cart} />
                     </div>
                     <footer className="p-4">
                         <Button className="w-full">View all</Button>

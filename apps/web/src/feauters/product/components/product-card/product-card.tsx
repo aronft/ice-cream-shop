@@ -6,6 +6,7 @@ import { Rating } from "@/components/ui/atoms/rating/rating";
 import { cn } from "@/lib/utils/class-name";
 import { ProductImage } from "../product-image/product-image";
 import { ProductTitle } from "../product-title/product-title";
+import { AddToCart } from "./add-to-cart";
 
 interface ProductCardProps extends ProductModel {
     titleTag: keyof Pick<JSX.IntrinsicElements, "h2" | "h3" | "h4">;
@@ -13,6 +14,7 @@ interface ProductCardProps extends ProductModel {
 }
 
 export const ProductCard = ({
+    id,
     src,
     name,
     price,
@@ -36,13 +38,13 @@ export const ProductCard = ({
                     <div className="flex flex-wrap justify-between h-full">
                         <ProductTitle title={name} titleTag={titleTag} />
                         <div className="flex items-center gap-4 mt-auto">
-                            <span className="text-tertiary-950 font-medium">${price}</span>
+                            <span className="text-tertiary-950 font-medium">
+                                ${price.toFixed(2)}
+                            </span>
                             <Rating rating={rating} />
                         </div>
                     </div>
-                    <button className="border group border-tertiary-100 rounded-full p-2  hover:bg-tertiary-900 min-h-max min-w-max">
-                        <AiOutlineShopping className="text-xl w-max group-hover:text-white" />
-                    </button>
+                    <AddToCart product={{ id: id, src: src, name, price, rating }} />
                 </footer>
             </article>
         </Link>

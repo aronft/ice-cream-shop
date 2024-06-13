@@ -1,10 +1,13 @@
+"use client";
 import Image from "next/image";
 import { CartItemModel } from "../../models/cart.model";
 import { AiOutlineMinus, AiOutlinePlus, AiOutlineDelete } from "react-icons/ai";
+import { useCartStore } from "../../store/cart.store";
 
 interface CartItemProps extends CartItemModel {}
 
-export const CartItem = ({ id, price, product, quantity }: CartItemProps): JSX.Element => {
+export const CartItem = ({ id, product, quantity }: CartItemProps): JSX.Element => {
+    const removeItem = useCartStore((state) => state.removeItem);
     return (
         <article className="flex flex-col gap-4">
             <div className="flex gap-4">
@@ -21,7 +24,9 @@ export const CartItem = ({ id, price, product, quantity }: CartItemProps): JSX.E
                     <h2 className="text-lg">{product.name}</h2>
                 </div>
                 <div className="flex flex-col ml-auto justify-between">
-                    <span className="font-medium text-lg">{price}</span>
+                    <span className="font-medium text-lg">
+                        ${(product.price * quantity).toFixed(2)}
+                    </span>
                     <div className="flex bg-primary-50 rounded border border-primary-300">
                         <button className="py-1 px-3">
                             <AiOutlineMinus />
@@ -34,7 +39,7 @@ export const CartItem = ({ id, price, product, quantity }: CartItemProps): JSX.E
                 </div>
             </div>
             <footer className="flex justify-end">
-                <button>
+                <button onClick={() => removeItem(id)}>
                     <AiOutlineDelete className="text-xl text-gray-300 hover:text-secondary-500" />
                 </button>
             </footer>

@@ -62,6 +62,7 @@ export const PopularProducts = ({ products, className }: PopularProductsProps) =
     const handlePrevSlide = () => {
         ref.current?.slickPrev();
     };
+
     return (
         <section className={cn("py-16", className)}>
             <Container className="flex flex-col gap-4">
